@@ -10,6 +10,13 @@
   </head>
 
   <body>
+  <% flash[:alert] %>
+  <% if user_signed_in? %>
+  HI    <%= current_user.email %>
+  <%= link_to "signout", destroy_user_session_path, method: :delete %>------
+  <%= link_to "Home", "/", method: :get %>
+  <%= link_to "Profile", "/users/profile/"+current_user.id.to_s, method: :get %>
+  <% end %>
     <%= yield %>
   </body>
 </html>

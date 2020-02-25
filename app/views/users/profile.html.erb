@@ -1,0 +1,41 @@
+
+<div>
+    User name : <%= @user.email %>
+</div>
+
+<table>
+    <thead>
+      <tr>
+        <th>Followings - <%= @followers.count %></th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @followers.each do |f| %>
+        <tr>
+          <td><%= f.email rescue ''%></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+
+  <table>
+    <thead>
+      <tr>
+        <th>Followers- <%= @followings.count %></th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @followings.each do |f| %>
+        <tr>
+          <td><%= f.email rescue ''%></td>
+     
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  

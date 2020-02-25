@@ -1,0 +1,12 @@
+<% tweet = Tweet.new() %>
+<%= form_with(model: tweet, local: true) do |form| %>
+<div class="field">
+<%= form.label :Tweet %>
+<%= form.text_field :post %>
+
+</div>
+<div class="actions">
+<%= form.submit 'Post Tweet' %>
+</div>
+<br>
+<% end %>
